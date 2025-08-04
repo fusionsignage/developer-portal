@@ -1,0 +1,8 @@
+{
+  "label": "Custom Apps",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "A guide to building your own custom digital signage content for Fusion Signage."
+  }
+}
