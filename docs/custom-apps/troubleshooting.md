@@ -50,7 +50,7 @@ Once you have deployed your custom app to a real device, it can be hard to know 
 place you will want to look is the browser logs. 
 
 Historically speaking, it has been hard for Fusion Signage developers themselves to get logs off devices out in the world.
-We are working on building a logging library into our [SDK](../sdk) to simplify remote logging, but in the interim you
+We are working on building a logging library into our [SDK](../sdk/coming-soon.md) to simplify remote logging, but in the interim you
 may find a tool like [Sentry](https://sentry.io/for/javascript/) to be useful for remotely investigating errors.
 
 Be sure to transpile the Sentry library itself so that it works for your target device, as Sentry also uses fairly modern 
