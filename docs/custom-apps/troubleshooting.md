@@ -54,4 +54,4 @@ We are working on building a logging library into our [SDK](../sdk/coming-soon.m
 may find a tool like [Sentry](https://sentry.io/for/javascript/) to be useful for remotely investigating errors.
 
 Be sure to transpile the Sentry library itself so that it works for your target device, as Sentry also uses fairly modern 
-JavaScript features. Our [example template](./getting-started.md#use-our-template) will take care of this for you.
+JavaScript features. Our [example template](./getting-started.md#start-from-a-template) will take care of this for you.

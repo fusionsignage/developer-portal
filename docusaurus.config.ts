@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Fusion Signage Developers',
-  tagline: 'Developer portal for developing for and integrating with Fusion Signage. Easy peasy.',
+  tagline: 'Developer portal for developing and integrating with Fusion Signage. Easy peasy.',
   favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
