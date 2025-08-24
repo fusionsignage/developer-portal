@@ -8,7 +8,7 @@ A **Custom App** is an HTML-based application developed by you that can be playe
 Custom apps run natively on the device and continue to play even without an internet connection.
 
 Custom Apps use the [W3C packaged web application](https://www.w3.org/TR/widgets/#widget-packages) standard. 
-They are simply a zip file (with the optional `.wgt` extension) that contains all the files required to play your custom content, 
+They are simply a zip file with the `.wgt` extension that contains all the files required to play your custom content, 
 such as HTML files, JavaScript files, CSS files, videos, and images.
 
 The only other thing your zip file needs is a `config.xml` file that helps Fusion Signage understand how to unzip and play your content.
