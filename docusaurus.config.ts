@@ -26,7 +26,6 @@ const config: Config = {
   projectName: 'developer-portal', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -34,6 +33,12 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
+    }
   },
 
   presets: [
@@ -53,6 +58,20 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            // Uncomment to test against local machine
+            // spec: 'http://localhost:3001/cats/openapi-json',
+            spec: 'https://api.fusionsignage.com.au/cats/openapi-json',
+            id: 'cats',
+            route: '/api',
+          }
+        ]
+      }
+    ]
   ],
 
   themeConfig: {
@@ -69,6 +88,10 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
+        },
+        {
+          label: 'API Reference',
+          to: '/api',
         },
         {
           href: 'https://github.com/fusionsignage/developer-portal',
