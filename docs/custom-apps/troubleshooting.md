@@ -55,3 +55,37 @@ may find a tool like [Sentry](https://sentry.io/for/javascript/) to be useful fo
 
 Be sure to transpile the Sentry library itself so that it works for your target device, as Sentry also uses fairly modern 
 JavaScript features. Our [example template](./getting-started.md#start-from-a-template) will take care of this for you.
+
+## Performance
+
+Most signage devices are significantly less powerful than a typical desktop computer. This can manifest as choppy CSS 
+animations, sluggish UI updates, or low frame rates when using APIs such as 
+[requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame).
+
+The best way to verify that your custom app performs well is to test it on a real device as early as possible and 
+optimise based on what you observe.
+
+As a quick diagnostic, you can drop the following snippet into your app to estimate its frame rate:
+
+```js
+let frameCount = 0;
+let lastTime = performance.now();
+const fpsLogInterval = 1000;
+function loop(timestamp) {
+  frameCount++;
+  const elapsed = timestamp - lastTime;
+  if (elapsed >= fpsLogInterval) {
+    const fps = (frameCount * 1000) / elapsed;
+    console.log(`FPS: ${fps.toFixed(2)}`);
+    frameCount = 0;
+    lastTime = timestamp;
+  }
+  requestAnimationFrame(loop);
+}
+console.log('Testing frame rate...');
+requestAnimationFrame(loop);
+```
+
+This won't tell you everything about your app's performance, but it can signal that there will be rendering issues on 
+lower-powered devices if your frame rate is low even on a desktop computer. If performance is poor, common fixes include 
+reducing animation complexity, avoiding unnecessary DOM updates, and moving expensive work out of rendering loops.
