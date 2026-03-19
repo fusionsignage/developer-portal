@@ -171,7 +171,7 @@ const config: Config = {
           items: [
             {
               label: 'Service status',
-              href: 'https://fusionsignage.statuspage.io/'
+              href: 'https://fusionsignage.statuspage.io/',
             },
             {
               label: 'GitHub',
