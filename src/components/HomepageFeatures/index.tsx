@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Custom Apps',
-    Svg: require('@site/static/img/html5-01-svgrepo-com.svg').default,
+    Svg: require('@site/static/img/custom-apps.svg').default,
     description: (
       <>
         Create HTML-based applications that can be played on your screens alongside other content like videos
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'API',
-    Svg: require('@site/static/img/api-settings-svgrepo-com.svg').default,
+    Svg: require('@site/static/img/api.svg').default,
     description: (
       <>
         Integrate Fusion Signage more deeply into your own workflows or products using our API.
@@ -31,7 +31,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'SDK',
-    Svg: require('@site/static/img/coding-data-development-svgrepo-com.svg').default,
+    Svg: require('@site/static/img/sdk.svg').default,
     description: (
       <>
         Extend your custom apps with our development kit allowing you to access native device behaviour such as video
@@ -44,7 +44,7 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className="text--center padding--md">
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">

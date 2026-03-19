@@ -10,6 +10,16 @@
   overflow: hidden;
 }
 
+.heroBanner {
+  background: linear-gradient(180deg, rgba(208, 222, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  color: #4E5767;
+}
+
+.goToDocumentation {
+  background-color: #4E5767 !important;
+  color: #ffffff !important;;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
