@@ -41,6 +41,31 @@ const config: Config = {
     }
   },
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap',
+      },
+    },
+  ],
+
   presets: [
     [
       'classic',
@@ -79,7 +104,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.png',
+    image: 'img/social-card.png',
     navbar: {
       title: 'Developer Portal',
       logo: {
@@ -128,8 +153,12 @@ const config: Config = {
           title: 'Fusion Signage',
           items: [
             {
-              label: 'Support Portal',
+              label: 'Support Centre',
               href: 'https://support.fusionsignage.com.au/',
+            },
+            {
+              label: 'Trust Centre',
+              href: 'https://trust.fusionsignage.com.au/',
             },
             {
               label: 'Home Page',
@@ -141,8 +170,8 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Security',
-              to: 'https://fusionsignage.com.au/security',
+              label: 'Service status',
+              href: 'https://fusionsignage.statuspage.io/',
             },
             {
               label: 'GitHub',
@@ -159,8 +188,12 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
+    colorMode: {
+      disableSwitch: true,
+      defaultMode: 'light',
+      respectPrefersColorScheme: false,
+    }
   } satisfies Preset.ThemeConfig,
 };
 
