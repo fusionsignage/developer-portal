@@ -1,12 +1,14 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: ReactNode;
+  link: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -19,6 +21,7 @@ const FeatureList: FeatureItem[] = [
         and images.
       </>
     ),
+    link: '/docs/category/custom-apps',
   },
   {
     title: 'API',
@@ -28,6 +31,7 @@ const FeatureList: FeatureItem[] = [
         Integrate Fusion Signage more deeply into your own workflows or products using our API.
       </>
     ),
+    link: '/docs/category/api',
   },
   {
     title: 'SDK',
@@ -38,19 +42,22 @@ const FeatureList: FeatureItem[] = [
         playback and storing content for offline access.
       </>
     ),
+    link: '/docs/category/sdk',
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center padding--md">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Link to={link} className={styles.featureLink}>
+        <div className="text--center padding--md">
+          <Svg className={styles.featureSvg} aria-hidden="true" />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -16,7 +16,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title nunito-sans-black900">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle nunito-sans-black900">{siteConfig.tagline}</p>
+        <p className="hero__subtitle nunito-sans-extra-bold-800">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className={clsx('button button--lg', styles.goToDocumentation)}
