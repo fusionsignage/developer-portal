@@ -9,3 +9,14 @@
   height: 150px;
   width: 150px;
 }
+
+.featureLink {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.featureLink:hover {
+  color: inherit;
+  text-decoration: none;
+}
