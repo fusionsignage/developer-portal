@@ -1,0 +1,50 @@
+version: v1.25.0
+ignore:
+  'snyk:lic:npm:lightningcss:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-darwin-x64:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-freebsd-x64:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-darwin-arm64:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-android-arm64:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-linux-x64-gnu:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-linux-x64-musl:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-win32-x64-msvc:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-linux-arm64-gnu:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-linux-arm64-musl:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-win32-arm64-msvc:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
+  'snyk:lic:npm:lightningcss-linux-arm-gnueabihf:MPL-2.0':
+    - '*':
+        reason: "This project is a documentation website and does not distribute compiled binaries or executable software to end users. The affected dependencies are transitive build-time packages. We will ignore this warning permanently."
+        expires: never
