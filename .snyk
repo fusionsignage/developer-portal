@@ -1,0 +1,5 @@
+ignore:
+  "license:MPL-2.0":
+    - "*":
+        reason: "MPL 2.0 is allowed for this project"
+        expires: "2099-12-31T23:59:59Z"
