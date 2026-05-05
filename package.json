@@ -52,7 +52,7 @@
     "overrides": {
       "lodash": "^4.18.1",
       "brace-expansion": "2.0.3",
-      "path-to-regexp": "0.1.13",
+      "path-to-regexp": "8.4.2",
       "picomatch": "2.3.2",
       "yaml": "1.10.3",
       "serialize-javascript": "7.0.5",
