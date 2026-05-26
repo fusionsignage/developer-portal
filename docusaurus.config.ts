@@ -188,6 +188,11 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
+      // When we added markdown to our OpenAPI spec, docusaurus + redocly started to fail to generate the site.
+      // Adding php to additionalLanguages works as a workaround because Docusaurus loads prism-markup-templating.js as
+      // a side effect, satisfying Redoc's internal dependency.
+      // Fixed sourced from https://github.com/rohit-gohri/redocusaurus/issues/388
+      additionalLanguages: ['php'],
     },
     colorMode: {
       disableSwitch: true,
