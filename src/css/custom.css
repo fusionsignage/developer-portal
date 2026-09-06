@@ -4,6 +4,18 @@
  * work well for content-centric websites.
  */
 
+/*
+ * Plus Jakarta Sans is loaded from Google Fonts in docusaurus.config.ts.
+ * Gelica is not published on Google Fonts, so it is self hosted.
+ */
+@font-face {
+  font-family: 'Gelica';
+  src: url('./fonts/Gelica-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #3578e5;
@@ -13,30 +25,46 @@
   --ifm-color-primary-light: #538ce9;
   --ifm-color-primary-lighter: #72a1ed;
   --ifm-color-primary-lightest: #9abcf2;
+  --ifm-font-color-base: #14232e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Body copy, headings h2 to h6, navbar, footer and the Redoc API reference. */
+  --ifm-font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+
+  /* Reserved for h1 only. */
+  --fusion-font-family-display: 'Gelica', Georgia, 'Times New Roman', serif;
 }
 
 [data-theme='dark'] {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.nunito-sans-black900 {
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-variation-settings:
-          "wdth" 100,
-          "YTLC" 500;
+/*
+ * The footer is rendered as .footer--dark (footer.style in docusaurus.config.ts),
+ * and Infima declares --ifm-footer-background-color on that element. An element
+ * level custom property beats one inherited from :root, so the override has to
+ * live here rather than in :root to take effect.
+ */
+.footer--dark {
+  --ifm-footer-background-color: #14232e;
 }
 
-.nunito-sans-extra-bold-800 {
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  font-variation-settings:
-          "wdth" 100,
-          "YTLC" 500;
+/*
+ * h1 is the only heading that uses the display font.
+ *
+ * This overrides the Infima heading variables on the element itself rather than
+ * setting font-family directly. Both Infima and Redoc (the /api reference) style
+ * their headings by reading these variables, so redefining them here reaches both,
+ * including Redoc's styled-components classes that would otherwise out-specify a
+ * bare h1 selector.
+ *
+ * We only have Gelica Regular, so the weight is pinned to 400 to stop browsers
+ * synthesising a fake bold.
+ */
+h1 {
+  --ifm-heading-font-family: var(--fusion-font-family-display);
+  --ifm-heading-font-weight: 400;
 }

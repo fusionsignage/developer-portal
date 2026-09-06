@@ -17,8 +17,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/custom-apps.svg').default,
     description: (
       <>
-        Create HTML-based applications that can be played on your screens alongside other content like videos
-        and images.
+        Create HTML-based applications to play on screens along other content like videos and images. <em>Nice.</em>
       </>
     ),
     link: '/docs/category/custom-apps',
@@ -28,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/api.svg').default,
     description: (
       <>
-        Integrate Fusion Signage more deeply into your own workflows or products using our API.
+        Snuggle Fusion Signage into your workflows or products using our API. You're welcome.
       </>
     ),
     link: '/docs/category/api',
@@ -38,8 +37,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/sdk.svg').default,
     description: (
       <>
-        Extend your custom apps with our development kit allowing you to access native device behaviour such as video
-        playback and storing content for offline access.
+        Extend your custom apps with our development kit so you can access native device behaviour like video playback
+        and store content for offline access.
       </>
     ),
     link: '/docs/category/sdk',
