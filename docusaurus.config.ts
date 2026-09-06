@@ -64,8 +64,6 @@ const config: Config = {
         href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
       },
     },
-    // Gelica is not published on Google Fonts, so it is self hosted from
-    // src/css/fonts and declared as an @font-face in src/css/custom.css.
   ],
 
   presets: [
