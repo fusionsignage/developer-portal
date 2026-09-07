@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Hi Fusion Signage Developers',
+  title: 'Fusion Signage Developers',
   tagline: 'This is your portal speaking. Here to make developing and integrating with Fusion Signage easy-peasy. Pleasure to have you. Big fans of your work.',
   favicon: 'img/favicon.svg',
 
