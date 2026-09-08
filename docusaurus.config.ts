@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Fusion Signage Developers',
-  tagline: 'Developer portal for developing and integrating with Fusion Signage easy-peasy',
-  favicon: 'img/favicon.png',
+  tagline: 'This is your portal speaking. Here to make developing and integrating with Fusion Signage easy-peasy. Pleasure to have you. Big fans of your work.',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -61,7 +61,7 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
       },
     },
   ],
@@ -109,7 +109,7 @@ const config: Config = {
       title: 'Developer Portal',
       logo: {
         alt: 'Fusion Signage Logo',
-        src: 'img/heart.png',
+        src: 'img/heart.svg',
       },
       items: [
         {
