@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import {Fragment, type ReactNode} from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -16,7 +16,14 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           Hi Fusion Signage Developers
         </Heading>
-        <p className={clsx('hero__subtitle')}>{siteConfig.tagline}</p>
+        <p className={clsx('hero__subtitle')}>
+          {siteConfig.tagline.split('\n').map((line, index) => (
+            <Fragment key={index}>
+              {index > 0 && <br />}
+              {line}
+            </Fragment>
+          ))}
+        </p>
         <div className={styles.buttons}>
           <Link
             className={clsx('button button--lg', styles.goToDocumentation)}
@@ -32,7 +39,7 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout description={siteConfig.tagline}>
+    <Layout description={siteConfig.tagline.replace(/\n/g, ' ')}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
